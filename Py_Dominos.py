@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait as wait
 import time
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome("C:\Python37\TestProject1\drivers\chromedriver.exe")
+driver = webdriver.Chrome("C:\Python37\TestProj1\ProjectPython1\driver\chromedriver.exe")
 driver.get("https://www.dominos.co.in")
 driver.set_page_load_timeout("50")
 
@@ -30,6 +30,27 @@ driver.find_element_by_xpath("//input[@id='custAddress']").send_keys(Keys.RETURN
 time.sleep(3)
 driver.find_element_by_xpath("//input[@id='buildOrderBtn']").click()
 time.sleep(3)
+
+#Login Code
+driver.find_element_by_xpath("//a[@id='login']").click()
+time.sleep(5)
+driver.find_element_by_xpath("//input[@id='txtMobileNo']").click()
+time.sleep(5)
+driver.find_element_by_xpath("//input[@id='txtMobileNo']").send_keys("9765102117")
+time.sleep(5)
+driver.find_element_by_xpath("//input[@id='txtMobileNo']").send_keys(Keys.RETURN)
+time.sleep(5)
+#driver.find_element_by_xpath("//input[@id='jqi_state0_buttonOk']").click()
+#time.sleep(5)
+driver.find_element_by_xpath("//input[@id='txtPassword']").click()
+time.sleep(5)
+driver.find_element_by_xpath("//input[@id='txtPassword']").send_keys("2784")
+time.sleep(5)
+driver.find_element_by_xpath("//input[@id='txtPassword']").send_keys(Keys.RETURN)
+time.sleep(5)
+driver.find_element_by_xpath("//input[@id='userlogin']").click()
+time.sleep(5)
+
 
 #MouseOver Action Code
 actions =chains(driver)
