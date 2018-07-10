@@ -50,6 +50,7 @@ driver.find_element_by_xpath("//input[@id='txtPassword']").send_keys(Keys.RETURN
 time.sleep(5)
 driver.find_element_by_xpath("//input[@id='userlogin']").click()
 time.sleep(5)
+driver.find_element_by_xpath("//a[@id='checkout']").click()
 
 
 #MouseOver Action Code
